@@ -23,8 +23,8 @@ const UserSchema = new Schema(
         required: true,
       },
       profilePic: {
-        data: Buffer,
-        contentType:String
+        type:String,
+        required:false,
       },
       refreshToken:{
         type:String,

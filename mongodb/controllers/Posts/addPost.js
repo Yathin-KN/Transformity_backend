@@ -1,9 +1,30 @@
-const Post = require("./../../schemas/post")
+const Post = require("./../../schemas/post");
+const Category = require("./../../schemas/category"); 
 
 const addPost = async (req, res) => {
   try {
     const { postDetails, user_id, content } = req.body;
+    const categories = postDetails.categories;
+    const categoriesModifies=[];
+   console.log(categories)
+    for (const category of categories) {
+      console.log(category)
+      categoriesModifies.push(category.categoryName)
+      try {
+        const existingCategory = await Category.findOne({ categoryName: category.categoryName });
 
+        if (existingCategory) {
+          existingCategory.postCount += 1;
+          await existingCategory.save();
+        } else {
+          const newCategory = new Category({ categoryName: category.categoryName });
+          await newCategory.save();
+        }
+      } catch (error) {
+        console.error(`Error processing category: ${category}`, error);
+      }
+    }
+    postDetails.categories=categoriesModifies;
     const newPost = new Post({
       postDetails,
       user_id,

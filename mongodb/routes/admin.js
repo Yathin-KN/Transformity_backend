@@ -12,4 +12,11 @@ router.post("/deletePost",(req,res)=>{
     apis.postDeleteController(req,res)
 })
 
+router.post("/addEvent",upload.single("photo"),(req,res)=>{
+    apis.addEvent(req,res);
+})
+
+router.delete("/deleteEvent/:eventId/:user_id",(req,res)=>{
+    apis.deleteEvent(req,res);
+})
 module.exports = router;

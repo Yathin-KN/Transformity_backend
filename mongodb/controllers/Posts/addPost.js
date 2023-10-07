@@ -5,6 +5,7 @@ const addPost = async (req, res) => {
   try {
     const { postDetails, user_id, content } = req.body;
     const categories = postDetails.categories;
+    console.log(categories)
     const categoriesModifies=[];
    console.log(categories)
     for (const category of categories) {

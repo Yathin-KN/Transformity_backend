@@ -10,6 +10,7 @@ const {getAllCategories}=require("./Category/getAllCategories")
 const {addEvent}=require("./Event/addEvent")
 const {deleteEvent}=require("./Event/deleteEvent")
 const {getAllEvents}=require("./Event/getAllEvents")
+const {getEventById}=require("./Event/getEventById")
 var apis={
   setUser:setUser,
   signinUser:signinUser,
@@ -29,6 +30,7 @@ var apis={
   addEvent:addEvent,
   deleteEvent:deleteEvent,
   getAllEvents:getAllEvents,
+  getEventById:getEventById,
 
 }
 

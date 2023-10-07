@@ -28,6 +28,10 @@ router.get("/post/:post_id",(req,res)=>{
   apis.getPostById(req,res);
 })
 
+router.get("/event/:eventId",(req,res)=>{
+  apis.getEventById(req,res)
+})
+
 
 router.get("/getAllCategories",(req,res)=>{
   apis.getAllCategories(req,res);

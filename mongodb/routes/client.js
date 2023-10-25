@@ -32,6 +32,9 @@ router.get("/event/:eventId",(req,res)=>{
   apis.getEventById(req,res)
 })
 
+router.get("/getAllPodcasts",(req,res)=>{
+  apis.getAllPodcasts(req,res)
+})
 
 router.get("/getAllCategories",(req,res)=>{
   apis.getAllCategories(req,res);

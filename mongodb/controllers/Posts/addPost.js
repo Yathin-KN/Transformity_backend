@@ -4,6 +4,7 @@ const Category = require("./../../schemas/category");
 const addPost = async (req, res) => {
   try {
     const { postDetails, user_id, content } = req.body;
+    console.log("--",content)
     const categories = postDetails.categories;
     console.log(categories)
     const categoriesModifies=[];

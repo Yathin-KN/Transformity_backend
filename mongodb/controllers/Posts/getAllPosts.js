@@ -11,7 +11,7 @@ const getAllPosts = async (req, res) => {
       
       let postImage = post.postDetails.postImage;
     
-      const imageContent = post.content.find(item => item.type === 'Image');
+      const imageContent = post.content.find(item => item?.type === 'Image');
       if (imageContent) {
         postImage = imageContent.content.imageUrl;
       }

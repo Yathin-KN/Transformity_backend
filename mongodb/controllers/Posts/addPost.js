@@ -3,8 +3,8 @@ const Category = require("./../../schemas/category");
 
 const addPost = async (req, res) => {
   try {
-    const { postDetails, user_id, content } = req.body;
-    const filteredContent = content.filter(item => item !== null);
+    var { postDetails, user_id, content } = req.body;
+    var filteredContent = content.filter(item => item !== null);
     content=filteredContent;
     console.log("--",content)
     const categories = postDetails.categories;

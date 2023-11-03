@@ -44,4 +44,8 @@ router.get("/getAllEvents",(req,res)=>{
   apis.getAllEvents(req,res);
 })
 
+router.post("/feedback",(req,res)=>{
+  apis.addFeedback(req,res)
+})
+
 module.exports = router;

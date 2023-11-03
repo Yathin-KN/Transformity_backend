@@ -14,6 +14,7 @@ const {getEventById}=require("./Event/getEventById")
 const {getAllPodcasts}=require("./Podcasts/getAllPodCasts")
 const { createPodcast}=require("./Podcasts/createPodCasts")
 const { deletePodCast }=require("./Podcasts/deletePodCasts")
+const {addFeedback}=require("./feedback/addFeedBack");
 var apis={
   setUser:setUser,
   signinUser:signinUser,
@@ -39,6 +40,9 @@ var apis={
   getAllPodcasts:getAllPodcasts,
   createPodcast:createPodcast,
   deletePodCast:deletePodCast,
+
+  //feedback
+  addFeedback:addFeedback,
 }
 
 module.exports = apis;
